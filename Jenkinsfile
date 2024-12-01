@@ -11,8 +11,10 @@ pipeline {
             }
             steps {
                 sh '''
+                    ls -a
                     npm ci 
                     npm run build
+                    ls -a
                 '''
             }
         }
@@ -29,6 +31,7 @@ pipeline {
             steps {
 
                 sh '''
+                    ls -a
                     test -f buid/index.html
                     npm test
                 '''
