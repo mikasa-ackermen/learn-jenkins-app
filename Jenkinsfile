@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout() // Disables automatic SCM checkout
+    }
+
     stages {
 
         stage('Prepare Workspace') {
